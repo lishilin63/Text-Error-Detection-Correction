@@ -58,6 +58,7 @@ In this project, we are going to **focus on the third stage -- post-processing**
 
 # Step 1 - Load library and source code
 ```{r, warning=FALSE, message = FALSE}
+library(stringr)
 if (!require("devtools")) install.packages("devtools")
 if (!require("pacman")) {
   ## devtools is required
@@ -111,6 +112,8 @@ The referenced papers are:
 In this statercode, we implement the first three rules in the first paper -- rule based techniques, as an example.
 
 ```{r}
+library(rebus.base)
+source('../lib/ifCleanToken.R')
 ### only process one of the files in the folder as an example, in your project, you need to use all the files
 current_file_name <- sub(".txt","",file_name_vec[5])
 
@@ -119,12 +122,54 @@ current_ground_truth_txt <- readLines(paste("../data/ground_truth/",current_file
 
 ## read the tesseract text
 current_tesseract_txt <- readLines(paste("../data/tesseract/",current_file_name,".txt",sep=""), warn=FALSE)
-clean_tesseract_txt <- paste(current_tesseract_txt, collapse = " ")
+clean_tesseract_txt <- paste(current_tesseract_txt, collapse = " ") #7193 nchar
 
 ## detect tesseract word error
 tesseract_vec <- str_split(clean_tesseract_txt," ")[[1]] #1124 tokens
-tesseract_if_clean <- unlist(lapply(tesseract_vec,ifCleanToken)) # source code of ifCleanToken in in lib folder
+tesseract_if_clean <- unlist(lapply(tesseract_vec,ifCleanToken)) # source code of ifCleanToken is in lib folder
+sum(tesseract_if_clean == F)
 ```
+
+
+```{r}
+##### Load 100 files and return tesseract_if_clean
+current_tesseract_txt_100 <- list(NA)
+clean_tesseract_txt_100 <- list(NA)
+tesseract_vec_100 <- list(NA)
+tesseract_if_clean_100 <- list(NA)
+
+
+for (i in 1:length(file_name_vec)) {
+  current_tesseract_txt_100[[i]] <- readLines(paste("../data/tesseract/",file_name_vec[i],sep=""), warn=FALSE)
+  clean_tesseract_txt_100[[i]] = paste(current_tesseract_txt_100[[i]], collapse = " ")
+  tesseract_vec_100[[i]] <- strsplit(unlist(clean_tesseract_txt_100[[i]])," ")
+ tesseract_if_clean_100[[i]] <- unlist(lapply(unlist(tesseract_vec_100[[i]]),ifCleanToken))
+}
+
+save(current_tesseract_txt_100, file="../output/current_tesseract_txt_100.RData")
+save(clean_tesseract_txt_100, file="../output/clean_tesseract_txt_100.RData")
+save(tesseract_vec_100, file="../output/tesseract_vec_100.RData")
+save(tesseract_if_clean_100, file="../output/tesseract_logical.RData")
+
+```
+
+
+```{r}
+##### Save 100 files denominator matrix
+source("../lib/denominator.R")
+current_ground_txt_100 <- list(NA)
+
+for (i in 1:length(file_name_vec)) {
+  current_ground_txt_100[[i]] <- readLines(paste("../data/tesseract/",file_name_vec[i],sep=""), warn=FALSE)
+}
+
+my_str = tolower(unlist(str_split(unlist(current_ground_txt_100),"")))
+mat <- insertion_method(my_str)
+#save(mat, file="../output/denominator.RData")
+```
+
+
+
 
 # Step 4 - Error correction
 
