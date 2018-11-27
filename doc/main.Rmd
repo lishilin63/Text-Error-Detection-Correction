@@ -146,6 +146,8 @@ for (i in 1:length(file_name_vec)) {
  tesseract_if_clean_100[[i]] <- unlist(lapply(unlist(tesseract_vec_100[[i]]),ifCleanToken))
 }
 
+
+
 #save(current_tesseract_txt_100, file="../output/current_tesseract_txt_100.RData")
 #save(clean_tesseract_txt_100, file="../output/clean_tesseract_txt_100.RData")
 #save(tesseract_vec_100, file="../output/tesseract_vec_100.RData")
