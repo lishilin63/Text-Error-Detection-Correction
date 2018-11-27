@@ -8,11 +8,10 @@ Term: Fall 2018
 
 + Team #
 + Team members
-	+ team member 1
-	+ team member 2
-	+ team member 3
-	+ team member 4
-	+ team member 5
+	+ Li, Shilin; SL4261
+	+ Jin, Peiqi 
+	+ Sun, Qiaqia; QS2184
+	+ Wang, Zehan; ZW2457
 
 + Project summary: In this project, we created an OCR post-processing procedure to enhance Tesseract OCR output. 
 	
