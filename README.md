@@ -9,7 +9,7 @@ Term: Fall 2018
 + Team #
 + Team members
 	+ Li, Shilin; SL4261
-	+ Jin, Peiqi 
+	+ Jin, Peiqi; PJ2324
 	+ Sun, Qiaqia; QS2184
 	+ Wang, Zehan; ZW2457
 
