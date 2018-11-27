@@ -12,6 +12,7 @@ Term: Fall 2018
 	+ Jin, Peiqi; PJ2324
 	+ Sun, Qiaqia; QS2184
 	+ Wang, Zehan; ZW2457
+	+ Yin, Yiqiao; YY2502
 
 + Project summary: In this project, we created an OCR post-processing procedure to enhance Tesseract OCR output. 
 	
