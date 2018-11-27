@@ -6,7 +6,7 @@
 
 Term: Fall 2018
 
-+ Team #
++ Team #1
 + Team members
 	+ Li, Shilin; SL4261
 	+ Jin, Peiqi; PJ2324
