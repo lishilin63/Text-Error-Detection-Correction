@@ -155,19 +155,27 @@ for (i in 1:length(file_name_vec)) {
 
 
 ```{r}
-##### Save 100 files denominator matrix
+##### Save 100 files denominator matrix, and characters frequency
 source("../lib/denominator.R")
+source("../lib/frequency.R")
 current_ground_txt_100 <- list(NA)
+clean_ground_txt_100 <- list(NA)
+ground_vec_100 <- list(NA)
+
 
 for (i in 1:length(file_name_vec)) {
   current_ground_txt_100[[i]] <- readLines(paste("../data/tesseract/",file_name_vec[i],sep=""), warn=FALSE)
+  clean_ground_txt_100[[i]] <- paste(current_ground_txt_100[[i]], collapse = " ")
+  ground_vec_100[[i]] <-  strsplit(unlist(clean_ground_txt_100[[i]])," ")
 }
 
 my_str = tolower(unlist(str_split(unlist(current_ground_txt_100),"")))
 mat <- insertion_method(my_str)
-#save(mat, file="../output/denominator.RData")
+freq <- letter_freq(my_str)
+#save(mat, file = "../output/denominator.RData")
+#save(freq, file = "../output/freq.RData")
+#save(ground_vec_100, file = "../output/ground_vec_100.RData")
 ```
-
 
 
 
