@@ -26,7 +26,7 @@ First, we will walk through our audience step-by-step process of how we detect e
 Next, we will present our analysis on error correction. We will specifically use paper (2) and we compute, with great details, the four probabilities required to correct the errors. Based on the corpus, we build our own confusion matrix and calculate the denominator of P(typo|cor) according to the bayesian method.
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-3.PNG)
 
-Furthermore, we can create this visualization to 
+Furthermore, we create this visualization to conclude the algorithm of selecting the best candidate. For each possible candidate, we have 4 lists corresponding to P(t|c), P(c), P(l|c), P(r|c) respectively that have exactly the same shape. We multiply the 4 lists with each of the element and the greatest score will be the one we chose for the error correction.   
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-4.PNG)
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-5.PNG)
 	
