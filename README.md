@@ -20,7 +20,7 @@ Term: Fall 2018
 
 * Main Submission: We prepared an integrated document in RMD format. Please click [link](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/main.Rmd)
 
-First, we will walk through our audience step-by-step process of how we detect errors after processed files. We take the the proposed methods from paper (1) and we present in detail the steps needed to search for the text errors.
+First, we will walk through our audience step-by-step process of how we detect errors after processed files. We take the the proposed methods from paper (1) and we present in detail the steps needed to search for the text errors. Method 4 in the paper has a flaw of deteting words like "by", "my" etc. that these words will return false. Thus, we improve the method by only detecting letters greater than 3 characters, and it returns better detection of errors.
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-2.PNG)
 
 Next, we will present our analysis on error correction. We will specifically use paper (2) and we compute, with great details, the four probabilities required to correct the errors. 
