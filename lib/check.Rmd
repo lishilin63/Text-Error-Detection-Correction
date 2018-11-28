@@ -1,0 +1,38 @@
+---
+title: "try"
+author: "Zehan Wang"
+date: "2018Äê11ÔÂ27ÈÕ"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+```{r}
+i=100
+### only process one of the files in the folder as an example, in your project, you need to use all the files
+current_file_name <- sub(".txt","",file_name_vec[i])
+current_file_name
+## read the ground truth text
+cgt <- readLines(paste("../data/ground_truth/",current_file_name,".txt",sep=""), warn=FALSE)
+#Whole_ground_file<- c(Whole_ground_file, current_ground_truth_txt)
+## read the tesseract text
+ctt <- readLines(paste("../data/tesseract/",current_file_name,".txt",sep=""), warn=FALSE)
+#whole_tesseract_file<- c(whole_tesseract_file, current_tesseract_txt)
+
+#line_check[, i]<- c(length(current_ground_truth_txt), length(current_tesseract_txt))
+
+which((line_check[1,]-line_check[2,])>0)
+```
+
+```{r}
+t_vec<- vector()
+g_vec<- vector()
+l1<- unlist(list_t[Line_use])
+l2<- unlist(list_g[Line_use])
+l3<- unlist(list_logic[Line_use])
+listt<- l1[!l3]
+listg<- l2[!l3]
+```

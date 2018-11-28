@@ -1,0 +1,68 @@
+---
+title: "Confusion"
+output: html_notebook
+---
+
+```{r}
+DEL<- matrix(0, 27, 26)
+INS<- matrix(0, 27, 26)
+SUB<- matrix(0, 26, 26)
+REV<- matrix(0, 26, 26)
+which_error<- vector()
+for (i in 1: length(list_t)){
+  if (Line_use[i]){
+    for (j in 1:length(list_t[[i]])){
+      if (list_logic[[i]][j]== FALSE){
+        word_t<- list_t[[i]][j]
+        word_g<- list_g[[i]][j]
+        if (!any(grepl('[^A-Za-z]', word_t))){
+        word_ca<- candidate(word_t)
+        if (any(word_g==word_ca[[1]])){
+          wordg<- c(unlist(strsplit(word_g, "")), " ")
+          wordt<- unlist(strsplit(word_t, ""))
+          ind<- which(wordg != wordt)[1]
+          L2<- wordt[ind]
+          L1<- wordt[ind-1]
+          if (any(L1==c(letters))){INS[which(L1==letters), which(L2==letters)]<- INS[which(L1==letters), which(L2==letters)]+1}
+          else {INS[27, which(L2==letters)]<- INS[27, which(L2==letters)]+1}
+          which_error<- c(which_error, 1)
+        }
+        if (any(word_g==word_ca[[2]])){
+          wordg<- unlist(strsplit(word_g, ""))
+          wordt<- c(unlist(strsplit(word_t, "")), " ")
+          ind<- which(wordg != wordt)[1]
+          L2<- wordg[ind]
+          L1<- wordg[ind-1]
+          if (any(L1==letters)){DEL[which(L1==letters), which(L2==letters)]<- DEL[which(L1==letters), which(L2==letters)]+1}
+          else {DEL[27, which(L2==letters)]<- DEL[27, which(L2==letters)]+1}
+          which_error<- c(which_error, 2)
+        }
+        if (any(word_g==word_ca[[3]])){
+          wordg<- unlist(strsplit(word_g, ""))
+          wordt<- unlist(strsplit(word_t, ""))
+          ind<- which(wordg != wordt)[1]
+          L2<- wordt[ind]
+          L1<- wordg[ind]
+          SUB[which(L2==letters), which(L1==letters)]<- SUB[which(L2==letters), which(L1==letters)]+1
+          which_error<- c(which_error, 3)
+        }
+        if (any(word_g==word_ca[[4]])){
+          wordg<- unlist(strsplit(word_g, ""))
+          wordt<- unlist(strsplit(word_t, ""))
+          #print(c(word_g, word_t))
+          ind<- which(wordg != wordt)[1]
+          L2<- wordt[ind]
+          L1<- wordt[ind+1]
+          REV[which(L2==letters), which(L1==letters)]<- REV[which(L2==letters), which(L1==letters)]+1
+          which_error<- c(which_error, 4)
+        }
+       }
+      }
+    }
+  }
+}
+
+
+```
+
+
