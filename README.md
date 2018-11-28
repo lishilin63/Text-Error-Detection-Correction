@@ -28,6 +28,8 @@ Next, we will present our analysis on error correction. We will specifically use
 
 Furthermore, we create this visualization to conclude the algorithm of selecting the best candidate. For each possible candidate, we have 4 lists corresponding to P(t|c), P(c), P(l|c), P(r|c) respectively that have exactly the same shape. We multiply the 4 lists with each of the element and the greatest score will be the one we chose for the error correction.   
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-4.PNG)
+
+In the evaluation part, we estimate the word-wise and character-wise recall and precision for MLE and ELE methods. The result shows that both correction methods perform better than original Tesseract with approximately 2% and 3% improvement respectively. Another advanced method called Good-Turing would perform better according to another paper refered by the author, and it is encouraged to evlauate GT method in the future.
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-5.PNG)
 	
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
