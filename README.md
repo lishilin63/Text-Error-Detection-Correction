@@ -18,7 +18,7 @@ Term: Fall 2018
 
 + Papers: Our assigned papers are (1) [Probability Scoring for Spelling Correction](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/paper/C-4.pdf) and (2) [On Retrieving Legal Files](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/paper/D-1.pdf).
 
-* Main Submission: We prepared an integrated document in RMD format. Please click [link](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/main.Rmd)
+* Main Submission: We prepared an integrated document in RMD format. Please click [link](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/main.Rmd). We will mainly be using PPT for presentation. Please click [here](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/ADS-Project4-Group1.pptx).
 
 First, we will walk through our audience step-by-step process of how we detect errors after processed files. We take the the proposed methods from paper (1) and we present in detail the steps needed to search for the text errors. Method 4 in the paper has a flaw of deteting words like "by", "my" etc. that these words will return false. Thus, we improve the method by only detecting letters greater than 3 characters, and it returns better detection of errors.
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-2.PNG)
