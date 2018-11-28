@@ -368,7 +368,7 @@ for (i in false_v){
   cand_c<- unlist(cand_list)
   if (length(candv1)!=0) {if (!is.na(candv1)) {final[i,2]<-  cand_c[which.max(candv1)]}}
   if (length(candv2)!=0) {if (!is.na(candv2)) {final[i,3]<-  cand_c[which.max(candv2)]}}
-  print(i)
+  #print(i)
   }
   #print(i)
 }
