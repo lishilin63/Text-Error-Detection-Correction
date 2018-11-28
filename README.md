@@ -21,6 +21,16 @@ Term: Fall 2018
 * Main Submission: We prepared an integrated document in RMD format. Please click [link](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/main.Rmd)
 
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-1.PNG)
+
+First, we will walk through our audience step-by-step process of how we detect errors after processed files. We take the the proposed methods from paper (1) and we present in detail the steps needed to search for the text errors.
+![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-2.PNG)
+
+Next, we will present our analysis on error correction. We will specifically use paper (2) and we compute, with great details, the four probabilities required to correct the errors. 
+![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-3.PNG)
+
+In this 
+![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-4.PNG)
+![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-5.PNG)
 	
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
