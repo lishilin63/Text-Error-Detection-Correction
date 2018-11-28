@@ -28,7 +28,7 @@ First, we will walk through our audience step-by-step process of how we detect e
 Next, we will present our analysis on error correction. We will specifically use paper (2) and we compute, with great details, the four probabilities required to correct the errors. 
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-3.PNG)
 
-In this 
+Furthermore, we can create this visualization to 
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-4.PNG)
 ![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-5.PNG)
 	
