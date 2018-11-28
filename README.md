@@ -19,6 +19,8 @@ Term: Fall 2018
 + Papers: Our assigned papers are (1) [Probability Scoring for Spelling Correction](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/paper/C-4.pdf) and (2) [On Retrieving Legal Files](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/paper/D-1.pdf).
 
 * Main Submission: We prepared an integrated document in RMD format. Please click [link](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/main.Rmd)
+
+![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-1.PNG)
 	
 **Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
