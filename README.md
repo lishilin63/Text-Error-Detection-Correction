@@ -1,6 +1,6 @@
 # Project: OCR (Optical Character Recognition) 
 
-![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/figs/screen-1.PNG)
+![image](https://github.com/TZstatsADS/Fall2018-Project4-sec1-grp1/blob/master/figs/intro.png)
 
 ### [Full Project Description](doc/project4_desc.md)
 
