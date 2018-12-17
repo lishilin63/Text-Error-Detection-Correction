@@ -4,16 +4,6 @@
 
 ### [Full Project Description](doc/project4_desc.md)
 
-Term: Fall 2018
-
-+ Team #1
-+ Team members
-	+ Li, Shilin; SL4261
-	+ Jin, Peiqi; PJ2324
-	+ Sun, Qiaqia; QS2184
-	+ Wang, Zehan; ZW2457
-	+ Yin, Yiqiao; YY2502
-
 + Project summary: In this project, we created an OCR post-processing procedure to enhance Tesseract OCR output. We focus on post-processing which includes two tasks: error detection and error correction. We will conduct this analysis in the following steps: (1) error detection, (2) error correction, (3) candidates selection, (4) comparison between MLE and ELE, and (5) evaluation and performance measure.
 
 + Papers: Our assigned papers are (1) [Probability Scoring for Spelling Correction](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/paper/C-4.pdf) and (2) [On Retrieving Legal Files](https://github.com/TZstatsADS/Fall2018-Project4-sec1--section1-project4_group1/blob/master/doc/paper/D-1.pdf).
